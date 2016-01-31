@@ -34,6 +34,10 @@ class AccountsListVC: UITableViewController {
         print("Selected Row: \(indexPath.row)")
     }
     
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        print("Selected Icon: \(indexPath.row)")
+    }
+    
     
     // -------------------------
     // UITableViewDataSource
