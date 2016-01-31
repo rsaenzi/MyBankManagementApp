@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B1C0AD601C5DDCF800B558A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */; };
-		B1C0AD621C5DDCF800B558A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD611C5DDCF800B558A0 /* ViewController.swift */; };
 		B1C0AD651C5DDCF800B558A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C0AD631C5DDCF800B558A0 /* Main.storyboard */; };
 		B1C0AD671C5DDCF800B558A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C0AD661C5DDCF800B558A0 /* Assets.xcassets */; };
 		B1C0AD6A1C5DDCF800B558A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C0AD681C5DDCF800B558A0 /* LaunchScreen.storyboard */; };
+		B1C0AD7B1C5DDF8300B558A0 /* ClientsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD7A1C5DDF8300B558A0 /* ClientsListVC.swift */; };
+		B1C0AD7D1C5DDFB800B558A0 /* AccountsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD7C1C5DDFB800B558A0 /* AccountsListVC.swift */; };
+		B1C0AD7F1C5DE00700B558A0 /* TransactionsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD7E1C5DE00700B558A0 /* TransactionsListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B1C0AD5C1C5DDCF800B558A0 /* MyBankManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBankManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1C0AD611C5DDCF800B558A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B1C0AD641C5DDCF800B558A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1C0AD661C5DDCF800B558A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1C0AD691C5DDCF800B558A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1C0AD6B1C5DDCF800B558A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1C0AD7A1C5DDF8300B558A0 /* ClientsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientsListVC.swift; sourceTree = "<group>"; };
+		B1C0AD7C1C5DDFB800B558A0 /* AccountsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsListVC.swift; sourceTree = "<group>"; };
+		B1C0AD7E1C5DE00700B558A0 /* TransactionsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,88 @@
 		B1C0AD5E1C5DDCF800B558A0 /* MyBankManagementApp */ = {
 			isa = PBXGroup;
 			children = (
-				B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */,
-				B1C0AD611C5DDCF800B558A0 /* ViewController.swift */,
-				B1C0AD631C5DDCF800B558A0 /* Main.storyboard */,
-				B1C0AD661C5DDCF800B558A0 /* Assets.xcassets */,
-				B1C0AD681C5DDCF800B558A0 /* LaunchScreen.storyboard */,
-				B1C0AD6B1C5DDCF800B558A0 /* Info.plist */,
+				B1C0AD731C5DDE1A00B558A0 /* Controller */,
+				B1C0AD721C5DDE1400B558A0 /* View */,
+				B1C0AD711C5DDE0D00B558A0 /* Model */,
 			);
 			path = MyBankManagementApp;
+			sourceTree = "<group>";
+		};
+		B1C0AD711C5DDE0D00B558A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD771C5DDE5800B558A0 /* Client */,
+				B1C0AD781C5DDE5F00B558A0 /* Account */,
+				B1C0AD791C5DDE9700B558A0 /* Transaction */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B1C0AD721C5DDE1400B558A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD761C5DDE4C00B558A0 /* Images */,
+				B1C0AD751C5DDE4300B558A0 /* ViewControllers */,
+				B1C0AD741C5DDE3100B558A0 /* Storyboards */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B1C0AD731C5DDE1A00B558A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */,
+				B1C0AD6B1C5DDCF800B558A0 /* Info.plist */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B1C0AD741C5DDE3100B558A0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD631C5DDCF800B558A0 /* Main.storyboard */,
+				B1C0AD681C5DDCF800B558A0 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B1C0AD751C5DDE4300B558A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD7A1C5DDF8300B558A0 /* ClientsListVC.swift */,
+				B1C0AD7C1C5DDFB800B558A0 /* AccountsListVC.swift */,
+				B1C0AD7E1C5DE00700B558A0 /* TransactionsListVC.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B1C0AD761C5DDE4C00B558A0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD661C5DDCF800B558A0 /* Assets.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B1C0AD771C5DDE5800B558A0 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		B1C0AD781C5DDE5F00B558A0 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		B1C0AD791C5DDE9700B558A0 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Transaction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1C0AD621C5DDCF800B558A0 /* ViewController.swift in Sources */,
+				B1C0AD7D1C5DDFB800B558A0 /* AccountsListVC.swift in Sources */,
+				B1C0AD7F1C5DE00700B558A0 /* TransactionsListVC.swift in Sources */,
 				B1C0AD601C5DDCF800B558A0 /* AppDelegate.swift in Sources */,
+				B1C0AD7B1C5DDF8300B558A0 /* ClientsListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +366,7 @@
 				B1C0AD701C5DDCF800B558A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
