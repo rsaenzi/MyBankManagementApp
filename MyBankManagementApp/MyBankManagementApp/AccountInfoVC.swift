@@ -61,8 +61,7 @@ class AccountInfoVC: UIViewController {
         } else if editionMode == .Edition {
             
             // Account edition
-            Bank.instance.getSelectedAccount().name = textfieldName.text!
-            Bank.instance.getSelectedAccount().number = textfieldNumber.text!
+            Bank.instance.editAccount(Bank.instance.getSelectedAccount(), newName: textfieldName.text!, newNumber: textfieldNumber.text!, newBalance: Bank.instance.getSelectedAccount().balance)
         }
         
         // Pop current screen

@@ -39,7 +39,7 @@ class AccountsListVC: UITableViewController {
         
         // Hit delete button for selected row
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            Bank.instance.deleteAccount(indexPath.row)
+            Bank.instance.deleteAccount(indexPath.row, accountToDelete: Bank.instance.getSelectedClient().accounts[indexPath.row])
             self.tableView.reloadData()
         }
     }

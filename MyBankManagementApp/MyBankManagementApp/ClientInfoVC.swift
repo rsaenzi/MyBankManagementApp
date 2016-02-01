@@ -67,9 +67,7 @@ class ClientInfoVC: UIViewController {
         } else if editionMode == .Edition {
             
             // Client Edition
-            Bank.instance.getSelectedClient().name = textfieldName.text!
-            Bank.instance.getSelectedClient().address = textfieldAddress.text!
-            Bank.instance.getSelectedClient().phone = textfieldPhone.text!
+            Bank.instance.editClient(Bank.instance.getSelectedClient(), newName: textfieldName.text!, newAddress: textfieldAddress.text!, newPhone: textfieldPhone.text!)
         }
         
         // Pop current screen
