@@ -30,7 +30,7 @@ class Bank {
     
     static let instance = Bank()
     private init() {
-        clients = []
+        clients = Persistence.instance.getAllClients()
         
         selectedClientId = 0
         selectedAccountId = 0
@@ -46,7 +46,13 @@ class Bank {
     // -------------------------
     
     func createClient(newClient: Client){
+        
+        // Add
         clients.insert(newClient, atIndex: 0)
+        
+        // Persist
+        let id = Persistence.instance.addClient(newClient)
+        newClient.databaseId = id
     }
     func deleteClient(clientId: Int){
         clients.removeAtIndex(clientId)

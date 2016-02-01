@@ -65,7 +65,7 @@ class ClientInfoVC: UIViewController {
             Bank.instance.createClient(newClient)
             
         } else if editionMode == .Edition {
-
+            
             // Client Edition
             Bank.instance.getSelectedClient().name = textfieldName.text!
             Bank.instance.getSelectedClient().address = textfieldAddress.text!

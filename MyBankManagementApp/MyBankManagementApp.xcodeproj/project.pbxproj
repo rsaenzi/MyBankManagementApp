@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE308BD5D7BD93A568889C99 /* Pods_MyBankManagementApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B79D4FD447523B17F6C4DA /* Pods_MyBankManagementApp.framework */; };
+		B14639D81C5F51D3004150EB /* BankDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = B14639D71C5F51D3004150EB /* BankDatabase.db */; };
 		B17147801C5EFFA7001FCD47 /* ReportSelectClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B171477F1C5EFFA7001FCD47 /* ReportSelectClientVC.swift */; };
 		B17147821C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17147811C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift */; };
 		B17147851C5F2F61001FCD47 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17147831C5F2F61001FCD47 /* libsqlite3.0.tbd */; };
 		B17147861C5F2F61001FCD47 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17147841C5F2F61001FCD47 /* libsqlite3.tbd */; };
-		B17147891C5F360A001FCD47 /* BankDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = B17147881C5F360A001FCD47 /* BankDatabase.db */; };
 		B1C0AD601C5DDCF800B558A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */; };
 		B1C0AD651C5DDCF800B558A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C0AD631C5DDCF800B558A0 /* Main.storyboard */; };
 		B1C0AD671C5DDCF800B558A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C0AD661C5DDCF800B558A0 /* Assets.xcassets */; };
@@ -34,11 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B79D4FD447523B17F6C4DA /* Pods_MyBankManagementApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBankManagementApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE709005D4706C2EC662D25 /* Pods-MyBankManagementApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBankManagementApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBankManagementApp/Pods-MyBankManagementApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B14639D71C5F51D3004150EB /* BankDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = BankDatabase.db; sourceTree = "<group>"; };
 		B171477F1C5EFFA7001FCD47 /* ReportSelectClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportSelectClientVC.swift; sourceTree = "<group>"; };
 		B17147811C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportSelectDateRangeVC.swift; sourceTree = "<group>"; };
 		B17147831C5F2F61001FCD47 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		B17147841C5F2F61001FCD47 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		B17147881C5F360A001FCD47 /* BankDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = BankDatabase.db; path = ../../../../../../Desktop/BankDatabase.db; sourceTree = "<group>"; };
 		B1C0AD5C1C5DDCF800B558A0 /* MyBankManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBankManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1C0AD641C5DDCF800B558A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		B1C0AD961C5E945000B558A0 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		B1C0AD981C5EAA5400B558A0 /* TransactionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
 		B1C0AD9A1C5EE96C00B558A0 /* ScreensInfoEditionMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreensInfoEditionMode.swift; sourceTree = "<group>"; };
+		EEC9235D469F4F0AF8F8ABB9 /* Pods-MyBankManagementApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBankManagementApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBankManagementApp/Pods-MyBankManagementApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,19 +73,37 @@
 			files = (
 				B17147851C5F2F61001FCD47 /* libsqlite3.0.tbd in Frameworks */,
 				B17147861C5F2F61001FCD47 /* libsqlite3.tbd in Frameworks */,
+				AE308BD5D7BD93A568889C99 /* Pods_MyBankManagementApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5668EFB365C9F753DDB637F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BE709005D4706C2EC662D25 /* Pods-MyBankManagementApp.debug.xcconfig */,
+				EEC9235D469F4F0AF8F8ABB9 /* Pods-MyBankManagementApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8A4D867557D21DE7A86BCA90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B79D4FD447523B17F6C4DA /* Pods_MyBankManagementApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B17147871C5F35CA001FCD47 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				B17147881C5F360A001FCD47 /* BankDatabase.db */,
+				B1C0AD921C5E1E0100B558A0 /* Persistence.swift */,
+				B14639D71C5F51D3004150EB /* BankDatabase.db */,
 				B17147831C5F2F61001FCD47 /* libsqlite3.0.tbd */,
 				B17147841C5F2F61001FCD47 /* libsqlite3.tbd */,
-				B1C0AD921C5E1E0100B558A0 /* Persistence.swift */,
 			);
 			name = Persistence;
 			sourceTree = "<group>";
@@ -91,6 +113,8 @@
 			children = (
 				B1C0AD5E1C5DDCF800B558A0 /* MyBankManagementApp */,
 				B1C0AD5D1C5DDCF800B558A0 /* Products */,
+				5668EFB365C9F753DDB637F6 /* Pods */,
+				8A4D867557D21DE7A86BCA90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,9 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1C0AD6E1C5DDCF800B558A0 /* Build configuration list for PBXNativeTarget "MyBankManagementApp" */;
 			buildPhases = (
+				96994BA6E130BA513FF5FE43 /* Check Pods Manifest.lock */,
 				B1C0AD581C5DDCF800B558A0 /* Sources */,
 				B1C0AD591C5DDCF800B558A0 /* Frameworks */,
 				B1C0AD5A1C5DDCF800B558A0 /* Resources */,
+				5E722D54F7A6B37510560191 /* Embed Pods Frameworks */,
+				24B9CC2A75F02FE8A7AB694C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,7 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B17147891C5F360A001FCD47 /* BankDatabase.db in Resources */,
+				B14639D81C5F51D3004150EB /* BankDatabase.db in Resources */,
 				B1C0AD6A1C5DDCF800B558A0 /* LaunchScreen.storyboard in Resources */,
 				B1C0AD671C5DDCF800B558A0 /* Assets.xcassets in Resources */,
 				B1C0AD651C5DDCF800B558A0 /* Main.storyboard in Resources */,
@@ -293,6 +320,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24B9CC2A75F02FE8A7AB694C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBankManagementApp/Pods-MyBankManagementApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E722D54F7A6B37510560191 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBankManagementApp/Pods-MyBankManagementApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96994BA6E130BA513FF5FE43 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B1C0AD581C5DDCF800B558A0 /* Sources */ = {
@@ -427,6 +502,7 @@
 		};
 		B1C0AD6F1C5DDCF800B558A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE709005D4706C2EC662D25 /* Pods-MyBankManagementApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyBankManagementApp/Info.plist;
@@ -438,6 +514,7 @@
 		};
 		B1C0AD701C5DDCF800B558A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEC9235D469F4F0AF8F8ABB9 /* Pods-MyBankManagementApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyBankManagementApp/Info.plist;
