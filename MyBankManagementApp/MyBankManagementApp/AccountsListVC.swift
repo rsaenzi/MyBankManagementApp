@@ -29,6 +29,21 @@ class AccountsListVC: UITableViewController {
         Bank.instance.setSelectedAccountId(indexPath.row)
     }
     
+    // Individual rows can opt out of having the -editing property set for them. If not implemented, all rows are assumed to be editable.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    // After a row has the minus or plus button invoked (based on the UITableViewCellEditingStyle for the cell), the dataSource must commit the change
+    // Not called for edit actions using UITableViewRowAction - the action's handler will be invoked instead
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // Hit delete button for selected row
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            Bank.instance.deleteAccount(indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
     
     
     // -------------------------

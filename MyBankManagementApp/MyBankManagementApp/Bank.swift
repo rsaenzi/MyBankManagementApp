@@ -41,18 +41,20 @@ class Bank {
     func createClient(newClient: Client){
         clients.insert(newClient, atIndex: 0)
     }
-    func editClient(clientId: Int64){
+    func deleteClient(clientId: Int){
+        clients.removeAtIndex(clientId)
     }
-    func deleteClient(clientId: Int64){
+    func editClient(clientId: Int){
     }
     
     
     func createAccount(newAccount: Account){
         getSelectedClient().accounts.insert(newAccount, atIndex: 0)
     }
-    func editAccount(accountId: Int64){
+    func deleteAccount(accountId: Int){
+        getSelectedClient().accounts.removeAtIndex(accountId)
     }
-    func deleteAccount(accountId: Int64){
+    func editAccount(accountId: Int64){
     }
     
     
