@@ -13,30 +13,22 @@ class TransactionsListVC: UITableViewController {
     // -------------------------
     // UIViewController
     // -------------------------
-    override func viewDidLoad() { // Called after the view has been loaded. For view controllers created in code, this is after -loadView. For view controllers unarchived from a nib, this is after the view is set.
-        
-    }
     
     override func viewWillAppear(animated: Bool) { // Called when the view is about to made visible. Default does nothing
-        
+        self.tableView.reloadData()
     }
     
-    override func viewDidAppear(animated: Bool) { // Called when the view has been fully transitioned onto the screen. Default does nothing
-        
-    }
     
     
     // -------------------------
     // UITableViewDelegate
     // -------------------------
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Selected Row: \(indexPath.row)")
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        print("Transaction \(indexPath.row)")
+        Bank.instance.setSelectedTransactionId(indexPath.row)
     }
     
-    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        print("Selected Icon: \(indexPath.row)")
-    }
     
     
     // -------------------------
@@ -44,12 +36,33 @@ class TransactionsListVC: UITableViewController {
     // -------------------------
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return Bank.instance.getSelectedAccount().transactions.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
+        
+        for currentView in cell.subviews[0].subviews {
+            
+            let labelView = currentView as! UILabel
+            
+            if labelView.tag == 1 { // Type
+                labelView.text = Bank.instance.getSelectedAccount().transactions[indexPath.row].type.rawValue
+            }
+            if labelView.tag == 2 { // Date
+                
+                // Date Formatting
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy hh:mm:ss"
+                
+                let dateString = formatter.stringFromDate(Bank.instance.getSelectedAccount().transactions[indexPath.row].date)
+                labelView.text = "Date: \(dateString)"
+            }
+            if labelView.tag == 3 { // Amount
+                labelView.text = "Amount: \(Bank.instance.getSelectedAccount().transactions[indexPath.row].amount)"
+            }
+        }
         return cell
     }
     

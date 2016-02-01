@@ -10,47 +10,42 @@ import UIKit
 
 class ClientInfoVC: UIViewController {
     
-    // -------------------------
-    // UIViewController
-    // -------------------------
-    override func viewDidLoad() { // Called after the view has been loaded. For view controllers created in code, this is after -loadView. For view controllers unarchived from a nib, this is after the view is set.
+    @IBOutlet weak var textfieldName: UITextField!
+    @IBOutlet weak var textfieldAddress: UITextField!
+    @IBOutlet weak var textfieldPhone: UITextField!
+    
+    @IBAction func onClickSave(sender: UIBarButtonItem) {
         
-    }
-    
-    override func viewWillAppear(animated: Bool) { // Called when the view is about to made visible. Default does nothing
+        // Input validation
+        if textfieldName.text == "" {
+            View.showAlert(self, messageToShow: "Name can not be empty")
+            return
+        }
+        if textfieldAddress.text == "" {
+            View.showAlert(self, messageToShow: "Address can not be empty")
+            return
+        }
+        if textfieldPhone.text == "" {
+            View.showAlert(self, messageToShow: "Phone can not be empty")
+            return
+        }
+        if let number = Int(textfieldPhone.text!) {
+
+            if number <= 0 {
+                View.showAlert(self, messageToShow: "Phone can not be negative or zero")
+                return
+            }
+        }else {
+            View.showAlert(self, messageToShow: "Phone can not have letters and spaces")
+            return
+        }
         
-    }
-    
-    override func viewDidAppear(animated: Bool) { // Called when the view has been fully transitioned onto the screen. Default does nothing
+        // Client creation
+        let newClient = Client(newName: textfieldName.text!, newAddress: textfieldAddress.text!, newPhone: textfieldPhone.text!)
+        Bank.instance.createClient(newClient)
         
+        // Pop current screen
+        self.navigationController?.popViewControllerAnimated(true)
     }
-    
-    /*
-    // -------------------------
-    // UITableViewDelegate
-    // -------------------------
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Selected Row: \(indexPath.row)")
-    }
-    
-    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        print("Selected Icon: \(indexPath.row)")
-    }
-    
-    
-    // -------------------------
-    // UITableViewDataSource
-    // -------------------------
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
-        return cell
-    }
-    */
+
 }

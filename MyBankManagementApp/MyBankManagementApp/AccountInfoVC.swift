@@ -10,47 +10,38 @@ import UIKit
 
 class AccountInfoVC: UIViewController {
     
-    // -------------------------
-    // UIViewController
-    // -------------------------
-    override func viewDidLoad() { // Called after the view has been loaded. For view controllers created in code, this is after -loadView. For view controllers unarchived from a nib, this is after the view is set.
+    @IBOutlet weak var textfieldName: UITextField!
+    @IBOutlet weak var textfieldNumber: UITextField!
+    
+    
+    @IBAction func onClickSave(sender: UIBarButtonItem) {
         
-    }
-    
-    override func viewWillAppear(animated: Bool) { // Called when the view is about to made visible. Default does nothing
+        // Input validation
+        if textfieldName.text == "" {
+            View.showAlert(self, messageToShow: "Name can not be empty")
+            return
+        }
+        if textfieldNumber.text == "" {
+            View.showAlert(self, messageToShow: "Number can not be empty")
+            return
+        }
+        if let number = Int(textfieldNumber.text!) {
+
+            if number <= 0 {
+                View.showAlert(self, messageToShow: "Number can not be negative or zero")
+                return
+            }
+        }else {
+            View.showAlert(self, messageToShow: "Number can not have letters and spaces")
+            return
+        }
         
-    }
-    
-    override func viewDidAppear(animated: Bool) { // Called when the view has been fully transitioned onto the screen. Default does nothing
+        // Account creation
+        let newAccount = Account(newName: textfieldName.text!, newNumber: textfieldNumber.text!)
+        Bank.instance.createAccount(newAccount)
         
+        // Pop current screen
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
-    /*
-    // -------------------------
-    // UITableViewDelegate
-    // -------------------------
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Selected Row: \(indexPath.row)")
-    }
-    
-    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        print("Selected Icon: \(indexPath.row)")
-    }
-    
-    
-    // -------------------------
-    // UITableViewDataSource
-    // -------------------------
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
-        return cell
-    }
-    */
 }

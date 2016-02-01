@@ -10,7 +10,16 @@ import Foundation
 
 class Client {
     
-//    var name: String
-//    var direccion:
+    var name: String
+    var address: String
+    var phone: String
+    var accounts: [Account]
+    
+    init(newName: String, newAddress: String, newPhone: String){
+        name = newName
+        address = newAddress
+        phone = newPhone
+        accounts = []
+    }
     
 }
