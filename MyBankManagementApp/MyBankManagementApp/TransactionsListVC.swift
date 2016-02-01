@@ -21,19 +21,13 @@ class TransactionsListVC: UITableViewController {
     
     
     // -------------------------
-    // UITableViewDelegate
+    // UITableViewController
     // -------------------------
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         print("Transaction \(indexPath.row)")
         Bank.instance.setSelectedTransactionId(indexPath.row)
     }
-    
-    
-    
-    // -------------------------
-    // UITableViewDataSource
-    // -------------------------
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Bank.instance.getSelectedAccount().transactions.count

@@ -26,6 +26,7 @@
 		B1C0AD931C5E1E0100B558A0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD921C5E1E0100B558A0 /* Persistence.swift */; };
 		B1C0AD971C5E945000B558A0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD961C5E945000B558A0 /* View.swift */; };
 		B1C0AD991C5EAA5400B558A0 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD981C5EAA5400B558A0 /* TransactionType.swift */; };
+		B1C0AD9B1C5EE96C00B558A0 /* ScreensInfoEditionMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD9A1C5EE96C00B558A0 /* ScreensInfoEditionMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		B1C0AD921C5E1E0100B558A0 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B1C0AD961C5E945000B558A0 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		B1C0AD981C5EAA5400B558A0 /* TransactionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		B1C0AD9A1C5EE96C00B558A0 /* ScreensInfoEditionMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreensInfoEditionMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				B1C0AD751C5DDE4300B558A0 /* ViewControllers */,
 				B1C0AD741C5DDE3100B558A0 /* Storyboards */,
 				B1C0AD961C5E945000B558A0 /* View.swift */,
+				B1C0AD9A1C5EE96C00B558A0 /* ScreensInfoEditionMode.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C0AD971C5E945000B558A0 /* View.swift in Sources */,
+				B1C0AD9B1C5EE96C00B558A0 /* ScreensInfoEditionMode.swift in Sources */,
 				B1C0AD851C5E012B00B558A0 /* Transaction.swift in Sources */,
 				B1C0AD8B1C5E087E00B558A0 /* ClientInfoVC.swift in Sources */,
 				B1C0AD8D1C5E088D00B558A0 /* AccountInfoVC.swift in Sources */,

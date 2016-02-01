@@ -14,6 +14,8 @@ class ClientInfoVC: UIViewController {
     @IBOutlet weak var textfieldAddress: UITextField!
     @IBOutlet weak var textfieldPhone: UITextField!
     
+    var editionMode: ScreensInfoEditionMode = .Creation
+    
     @IBAction func onClickSave(sender: UIBarButtonItem) {
         
         // Input validation

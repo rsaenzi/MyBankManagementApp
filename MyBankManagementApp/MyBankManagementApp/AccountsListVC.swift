@@ -21,7 +21,7 @@ class AccountsListVC: UITableViewController {
     
     
     // -------------------------
-    // UITableViewDelegate
+    // UITableViewController
     // -------------------------
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
@@ -45,11 +45,19 @@ class AccountsListVC: UITableViewController {
         }
     }
     
-    
-    // -------------------------
-    // UITableViewDataSource
-    // -------------------------
-    
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        print("Icon: \(indexPath.row)")
+        
+        // Create ClientInfo screen
+        let clientInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ClientInfo") as! ClientInfoVC
+        
+        // Configure screen to edit selected account
+        clientInfoVC.editionMode = ScreensInfoEditionMode.Edition
+        
+        // Add screen to navigation controller
+        self.navigationController?.pushViewController(clientInfoVC, animated: true)
+    }
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Bank.instance.getSelectedClient().accounts.count
     }

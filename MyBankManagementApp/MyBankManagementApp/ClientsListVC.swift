@@ -13,6 +13,11 @@ class ClientsListVC: UITableViewController {
     // -------------------------
     // UIViewController
     // -------------------------
+
+    override func viewDidLoad() { // Called after the view has been loaded. For view controllers created in code, this is after -loadView. For view controllers unarchived from a nib, this is after the view is set.
+     
+        //View.showAlert(self, messageToShow: "On a Client entry, press icon (i) to Edit, swipe left to Delete and tap to View its accounts.\n\nSame controls apply for Accounts.\n\nTransactions can not be edited or deleted.")
+    }
     
     override func viewWillAppear(animated: Bool) { // Called when the view is about to made visible. Default does nothing
         self.tableView.reloadData()
@@ -21,7 +26,7 @@ class ClientsListVC: UITableViewController {
     
     
     // -------------------------
-    // UITableViewDelegate
+    // UITableViewController
     // -------------------------
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
@@ -45,13 +50,27 @@ class ClientsListVC: UITableViewController {
         }
     }
     
-    
-    
-    // -------------------------
-    // UITableViewDataSource
-    // -------------------------
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        print("Icon: \(indexPath.row)")
+        
+        // Create ClientInfo screen
+        let clientInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ClientInfo") as! ClientInfoVC
+        
+        // Configure screen to edit selected client
+        clientInfoVC.editionMode = ScreensInfoEditionMode.Edition
+        
+        // Add screen to navigation controller
+        self.navigationController?.pushViewController(clientInfoVC, animated: true)
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (View.alertShownFirstTime == false) && (Bank.instance.clients.count == 1) {
+            
+            // Instruction dialog
+            View.alertShownFirstTime = true
+            
+            View.showAlert(self, messageToShow: "On a Client entry, press icon (i) to Edit, swipe left to Delete and tap to View its accounts.\n\nSame controls apply for Accounts.\n\nTransactions can not be edited or deleted.")
+        }
         return Bank.instance.clients.count
     }
     

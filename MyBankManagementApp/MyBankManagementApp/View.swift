@@ -10,6 +10,8 @@ import UIKit
 
 class View {
     
+    static var alertShownFirstTime: Bool = false
+    
     class func showAlert(currentViewController: UIViewController, messageToShow: String){
         
         // Create an alert

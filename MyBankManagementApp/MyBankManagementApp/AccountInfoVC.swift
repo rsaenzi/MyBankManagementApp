@@ -13,6 +13,7 @@ class AccountInfoVC: UIViewController {
     @IBOutlet weak var textfieldName: UITextField!
     @IBOutlet weak var textfieldNumber: UITextField!
     
+    var editionMode: ScreensInfoEditionMode = .Creation
     
     @IBAction func onClickSave(sender: UIBarButtonItem) {
         
