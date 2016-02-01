@@ -37,6 +37,14 @@ class TransactionsListVC: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         
+        // Cell Color
+        if Bank.instance.getSelectedAccount().transactions[indexPath.row].type == TransactionType.Debit {
+            cell.backgroundColor = View.transactionColorSoftGreen
+        }else{
+            cell.backgroundColor = View.transactionColorSoftRed
+        }
+        
+        // Cell Content
         for currentView in cell.subviews[0].subviews {
             
             let labelView = currentView as! UILabel
@@ -54,7 +62,7 @@ class TransactionsListVC: UITableViewController {
                 labelView.text = "Date: \(dateString)"
             }
             if labelView.tag == 3 { // Amount
-                labelView.text = "Amount: \(Bank.instance.getSelectedAccount().transactions[indexPath.row].amount)"
+                labelView.text = "Amount: $\(Bank.instance.getSelectedAccount().transactions[indexPath.row].amount)"
             }
         }
         return cell

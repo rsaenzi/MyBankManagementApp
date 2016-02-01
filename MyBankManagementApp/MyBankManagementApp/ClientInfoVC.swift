@@ -14,7 +14,22 @@ class ClientInfoVC: UIViewController {
     @IBOutlet weak var textfieldAddress: UITextField!
     @IBOutlet weak var textfieldPhone: UITextField!
     
-    var editionMode: ScreensInfoEditionMode = .Creation
+    private var editionMode: ScreensInfoEditionMode = .Creation
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        if editionMode == .Creation {
+            self.navigationItem.title = "Add Client"
+            
+        } else if editionMode == .Edition {
+            self.navigationItem.title = "Edit Client"
+            
+            // Fill screen with client info
+            textfieldName.text = Bank.instance.getSelectedClient().name
+            textfieldAddress.text = Bank.instance.getSelectedClient().address
+            textfieldPhone.text = Bank.instance.getSelectedClient().phone
+        }
+    }
     
     @IBAction func onClickSave(sender: UIBarButtonItem) {
         
@@ -32,7 +47,7 @@ class ClientInfoVC: UIViewController {
             return
         }
         if let number = Int(textfieldPhone.text!) {
-
+            
             if number <= 0 {
                 View.showAlert(self, messageToShow: "Phone can not be negative or zero")
                 return
@@ -42,12 +57,27 @@ class ClientInfoVC: UIViewController {
             return
         }
         
-        // Client creation
-        let newClient = Client(newName: textfieldName.text!, newAddress: textfieldAddress.text!, newPhone: textfieldPhone.text!)
-        Bank.instance.createClient(newClient)
+        // Client Processing
+        if editionMode == .Creation {
+            
+            // Client creation
+            let newClient = Client(newName: textfieldName.text!, newAddress: textfieldAddress.text!, newPhone: textfieldPhone.text!)
+            Bank.instance.createClient(newClient)
+            
+        } else if editionMode == .Edition {
+
+            // Client Edition
+            Bank.instance.getSelectedClient().name = textfieldName.text!
+            Bank.instance.getSelectedClient().address = textfieldAddress.text!
+            Bank.instance.getSelectedClient().phone = textfieldPhone.text!
+        }
         
         // Pop current screen
         self.navigationController?.popViewControllerAnimated(true)
     }
-
+    
+    func enableEditionMode(clientId: Int){
+        editionMode = .Edition
+    }
+    
 }

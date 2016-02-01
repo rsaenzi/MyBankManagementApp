@@ -13,9 +13,9 @@ class ClientsListVC: UITableViewController {
     // -------------------------
     // UIViewController
     // -------------------------
-
+    
     override func viewDidLoad() { // Called after the view has been loaded. For view controllers created in code, this is after -loadView. For view controllers unarchived from a nib, this is after the view is set.
-     
+        
         //View.showAlert(self, messageToShow: "On a Client entry, press icon (i) to Edit, swipe left to Delete and tap to View its accounts.\n\nSame controls apply for Accounts.\n\nTransactions can not be edited or deleted.")
     }
     
@@ -52,12 +52,13 @@ class ClientsListVC: UITableViewController {
     
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         print("Icon: \(indexPath.row)")
+        Bank.instance.setSelectedClientId(indexPath.row)
         
         // Create ClientInfo screen
         let clientInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ClientInfo") as! ClientInfoVC
         
         // Configure screen to edit selected client
-        clientInfoVC.editionMode = ScreensInfoEditionMode.Edition
+        clientInfoVC.enableEditionMode(indexPath.row)
         
         // Add screen to navigation controller
         self.navigationController?.pushViewController(clientInfoVC, animated: true)
@@ -78,6 +79,10 @@ class ClientsListVC: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         
+        // Cell Color
+        cell.backgroundColor = View.clientsColor
+        
+        // Cell Content
         for currentView in cell.subviews[0].subviews {
             
             let labelView = currentView as! UILabel

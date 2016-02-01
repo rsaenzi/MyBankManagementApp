@@ -47,17 +47,18 @@ class AccountsListVC: UITableViewController {
     
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         print("Icon: \(indexPath.row)")
+        Bank.instance.setSelectedAccountId(indexPath.row)
         
         // Create ClientInfo screen
-        let clientInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ClientInfo") as! ClientInfoVC
+        let accountInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("AccountInfo") as! AccountInfoVC
         
         // Configure screen to edit selected account
-        clientInfoVC.editionMode = ScreensInfoEditionMode.Edition
+        accountInfoVC.enableEditionMode(indexPath.row)
         
         // Add screen to navigation controller
-        self.navigationController?.pushViewController(clientInfoVC, animated: true)
+        self.navigationController?.pushViewController(accountInfoVC, animated: true)
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Bank.instance.getSelectedClient().accounts.count
     }
@@ -66,6 +67,10 @@ class AccountsListVC: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         
+        // Cell Color
+        cell.backgroundColor = View.accountsColor
+        
+        // Cell Content
         for currentView in cell.subviews[0].subviews {
             
             let labelView = currentView as! UILabel
@@ -77,7 +82,7 @@ class AccountsListVC: UITableViewController {
                 labelView.text = "Number: \(Bank.instance.getSelectedClient().accounts[indexPath.row].number)"
             }
             if labelView.tag == 3 { // Balance
-                labelView.text = "Balance: \(String(Bank.instance.getSelectedClient().accounts[indexPath.row].balance))"
+                labelView.text = "Balance: $\(String(Bank.instance.getSelectedClient().accounts[indexPath.row].balance))"
             }
         }
         return cell

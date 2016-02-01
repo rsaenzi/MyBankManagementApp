@@ -118,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */,
-				B1C0AD6B1C5DDCF800B558A0 /* Info.plist */,
 				B1C0AD921C5E1E0100B558A0 /* Persistence.swift */,
+				B1C0AD6B1C5DDCF800B558A0 /* Info.plist */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -136,14 +136,9 @@
 		B1C0AD751C5DDE4300B558A0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1C0AD7A1C5DDF8300B558A0 /* ClientsListVC.swift */,
-				B1C0AD7C1C5DDFB800B558A0 /* AccountsListVC.swift */,
-				B1C0AD7E1C5DE00700B558A0 /* TransactionsListVC.swift */,
-				B1C0AD861C5E084B00B558A0 /* ReportConfigurationVC.swift */,
-				B1C0AD881C5E085C00B558A0 /* ReportResultsVC.swift */,
-				B1C0AD8A1C5E087E00B558A0 /* ClientInfoVC.swift */,
-				B1C0AD8C1C5E088D00B558A0 /* AccountInfoVC.swift */,
-				B1C0AD8E1C5E089D00B558A0 /* TransactionInfoVC.swift */,
+				B1C0AD9D1C5EF05C00B558A0 /* List */,
+				B1C0AD9C1C5EF05000B558A0 /* Info */,
+				B1C0AD9E1C5EF06700B558A0 /* Report */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +174,35 @@
 				B1C0AD981C5EAA5400B558A0 /* TransactionType.swift */,
 			);
 			name = Transaction;
+			sourceTree = "<group>";
+		};
+		B1C0AD9C1C5EF05000B558A0 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD8A1C5E087E00B558A0 /* ClientInfoVC.swift */,
+				B1C0AD8C1C5E088D00B558A0 /* AccountInfoVC.swift */,
+				B1C0AD8E1C5E089D00B558A0 /* TransactionInfoVC.swift */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		B1C0AD9D1C5EF05C00B558A0 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD7A1C5DDF8300B558A0 /* ClientsListVC.swift */,
+				B1C0AD7C1C5DDFB800B558A0 /* AccountsListVC.swift */,
+				B1C0AD7E1C5DE00700B558A0 /* TransactionsListVC.swift */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		B1C0AD9E1C5EF06700B558A0 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				B1C0AD861C5E084B00B558A0 /* ReportConfigurationVC.swift */,
+				B1C0AD881C5E085C00B558A0 /* ReportResultsVC.swift */,
+			);
+			name = Report;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

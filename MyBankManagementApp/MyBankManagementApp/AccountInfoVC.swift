@@ -13,7 +13,21 @@ class AccountInfoVC: UIViewController {
     @IBOutlet weak var textfieldName: UITextField!
     @IBOutlet weak var textfieldNumber: UITextField!
     
-    var editionMode: ScreensInfoEditionMode = .Creation
+    private var editionMode: ScreensInfoEditionMode = .Creation
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        if editionMode == .Creation {
+            self.navigationItem.title = "Add Account"
+            
+        } else if editionMode == .Edition {
+            self.navigationItem.title = "Edit Account"
+            
+            // Fill screen with client info
+            textfieldName.text = Bank.instance.getSelectedAccount().name
+            textfieldNumber.text = Bank.instance.getSelectedAccount().number
+        }
+    }
     
     @IBAction func onClickSave(sender: UIBarButtonItem) {
         
@@ -27,7 +41,7 @@ class AccountInfoVC: UIViewController {
             return
         }
         if let number = Int(textfieldNumber.text!) {
-
+            
             if number <= 0 {
                 View.showAlert(self, messageToShow: "Number can not be negative or zero")
                 return
@@ -37,12 +51,26 @@ class AccountInfoVC: UIViewController {
             return
         }
         
-        // Account creation
-        let newAccount = Account(newName: textfieldName.text!, newNumber: textfieldNumber.text!)
-        Bank.instance.createAccount(newAccount)
+        // Account processing
+        if editionMode == .Creation {
+            
+            // Account creation
+            let newAccount = Account(newName: textfieldName.text!, newNumber: textfieldNumber.text!)
+            Bank.instance.createAccount(newAccount)
+            
+        } else if editionMode == .Edition {
+            
+            // Account edition
+            Bank.instance.getSelectedAccount().name = textfieldName.text!
+            Bank.instance.getSelectedAccount().number = textfieldNumber.text!
+        }
         
         // Pop current screen
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    func enableEditionMode(accountId: Int){
+        editionMode = .Edition
     }
     
 }

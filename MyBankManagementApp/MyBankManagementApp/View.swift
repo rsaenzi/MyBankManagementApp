@@ -11,6 +11,13 @@ import UIKit
 class View {
     
     static var alertShownFirstTime: Bool = false
+
+    static var clientsColor =  UIColor(red: 255/255.0, green: 255/255.0, blue: 156/255.0, alpha: 1)
+    static var accountsColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 156/255.0, alpha: 1)
+    
+    static var transactionColorSoftGreen = UIColor(red: 160/255.0, green: 255/255.0, blue: 156/255.0, alpha: 1)
+    static var transactionColorSoftRed = UIColor(red: 255/255.0, green: 156/255.0, blue: 156/255.0, alpha: 1)
+    
     
     class func showAlert(currentViewController: UIViewController, messageToShow: String){
         
