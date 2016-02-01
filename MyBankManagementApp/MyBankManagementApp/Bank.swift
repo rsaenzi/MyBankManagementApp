@@ -20,6 +20,9 @@ class Bank {
     var selectedAccountId: Int
     var selectedTransactionId: Int
     
+    var selectedStartDateForReport: NSDate
+    var selectedEndDateForReport: NSDate
+    
     
     // -------------------------
     // Singleton
@@ -28,9 +31,13 @@ class Bank {
     static let instance = Bank()
     private init() {
         clients = []
+        
         selectedClientId = 0
         selectedAccountId = 0
         selectedTransactionId = 0
+        
+        selectedStartDateForReport = NSDate()
+        selectedEndDateForReport = NSDate()
     }
     
     
@@ -44,8 +51,6 @@ class Bank {
     func deleteClient(clientId: Int){
         clients.removeAtIndex(clientId)
     }
-    func editClient(clientId: Int){
-    }
     
     
     func createAccount(newAccount: Account){
@@ -53,8 +58,6 @@ class Bank {
     }
     func deleteAccount(accountId: Int){
         getSelectedClient().accounts.removeAtIndex(accountId)
-    }
-    func editAccount(accountId: Int64){
     }
     
     
@@ -67,9 +70,6 @@ class Bank {
             getSelectedAccount().balance = getSelectedAccount().balance - newTrasaction.amount
         }
     }
-    
-    
-    func generateReport(startdate: NSDate, endDate: NSDate, clientId: Int64){}
     
     
     

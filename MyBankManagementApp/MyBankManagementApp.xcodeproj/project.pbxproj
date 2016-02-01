@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B17147801C5EFFA7001FCD47 /* ReportSelectClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B171477F1C5EFFA7001FCD47 /* ReportSelectClientVC.swift */; };
+		B17147821C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17147811C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift */; };
+		B17147851C5F2F61001FCD47 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17147831C5F2F61001FCD47 /* libsqlite3.0.tbd */; };
+		B17147861C5F2F61001FCD47 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B17147841C5F2F61001FCD47 /* libsqlite3.tbd */; };
+		B17147891C5F360A001FCD47 /* BankDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = B17147881C5F360A001FCD47 /* BankDatabase.db */; };
 		B1C0AD601C5DDCF800B558A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */; };
 		B1C0AD651C5DDCF800B558A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C0AD631C5DDCF800B558A0 /* Main.storyboard */; };
 		B1C0AD671C5DDCF800B558A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C0AD661C5DDCF800B558A0 /* Assets.xcassets */; };
@@ -17,7 +22,6 @@
 		B1C0AD811C5E00E700B558A0 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD801C5E00E700B558A0 /* Client.swift */; };
 		B1C0AD831C5E010600B558A0 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD821C5E010600B558A0 /* Account.swift */; };
 		B1C0AD851C5E012B00B558A0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD841C5E012B00B558A0 /* Transaction.swift */; };
-		B1C0AD871C5E084B00B558A0 /* ReportConfigurationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD861C5E084B00B558A0 /* ReportConfigurationVC.swift */; };
 		B1C0AD891C5E085C00B558A0 /* ReportResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD881C5E085C00B558A0 /* ReportResultsVC.swift */; };
 		B1C0AD8B1C5E087E00B558A0 /* ClientInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD8A1C5E087E00B558A0 /* ClientInfoVC.swift */; };
 		B1C0AD8D1C5E088D00B558A0 /* AccountInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C0AD8C1C5E088D00B558A0 /* AccountInfoVC.swift */; };
@@ -30,6 +34,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B171477F1C5EFFA7001FCD47 /* ReportSelectClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportSelectClientVC.swift; sourceTree = "<group>"; };
+		B17147811C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportSelectDateRangeVC.swift; sourceTree = "<group>"; };
+		B17147831C5F2F61001FCD47 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		B17147841C5F2F61001FCD47 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B17147881C5F360A001FCD47 /* BankDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = BankDatabase.db; path = ../../../../../../Desktop/BankDatabase.db; sourceTree = "<group>"; };
 		B1C0AD5C1C5DDCF800B558A0 /* MyBankManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBankManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1C0AD641C5DDCF800B558A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +51,6 @@
 		B1C0AD801C5E00E700B558A0 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		B1C0AD821C5E010600B558A0 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		B1C0AD841C5E012B00B558A0 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		B1C0AD861C5E084B00B558A0 /* ReportConfigurationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportConfigurationVC.swift; sourceTree = "<group>"; };
 		B1C0AD881C5E085C00B558A0 /* ReportResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportResultsVC.swift; sourceTree = "<group>"; };
 		B1C0AD8A1C5E087E00B558A0 /* ClientInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientInfoVC.swift; sourceTree = "<group>"; };
 		B1C0AD8C1C5E088D00B558A0 /* AccountInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountInfoVC.swift; sourceTree = "<group>"; };
@@ -59,12 +67,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17147851C5F2F61001FCD47 /* libsqlite3.0.tbd in Frameworks */,
+				B17147861C5F2F61001FCD47 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B17147871C5F35CA001FCD47 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				B17147881C5F360A001FCD47 /* BankDatabase.db */,
+				B17147831C5F2F61001FCD47 /* libsqlite3.0.tbd */,
+				B17147841C5F2F61001FCD47 /* libsqlite3.tbd */,
+				B1C0AD921C5E1E0100B558A0 /* Persistence.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
 		B1C0AD531C5DDCF800B558A0 = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +138,8 @@
 		B1C0AD731C5DDE1A00B558A0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B17147871C5F35CA001FCD47 /* Persistence */,
 				B1C0AD5F1C5DDCF800B558A0 /* AppDelegate.swift */,
-				B1C0AD921C5E1E0100B558A0 /* Persistence.swift */,
 				B1C0AD6B1C5DDCF800B558A0 /* Info.plist */,
 			);
 			name = Controller;
@@ -199,8 +220,9 @@
 		B1C0AD9E1C5EF06700B558A0 /* Report */ = {
 			isa = PBXGroup;
 			children = (
-				B1C0AD861C5E084B00B558A0 /* ReportConfigurationVC.swift */,
 				B1C0AD881C5E085C00B558A0 /* ReportResultsVC.swift */,
+				B171477F1C5EFFA7001FCD47 /* ReportSelectClientVC.swift */,
+				B17147811C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift */,
 			);
 			name = Report;
 			sourceTree = "<group>";
@@ -263,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17147891C5F360A001FCD47 /* BankDatabase.db in Resources */,
 				B1C0AD6A1C5DDCF800B558A0 /* LaunchScreen.storyboard in Resources */,
 				B1C0AD671C5DDCF800B558A0 /* Assets.xcassets in Resources */,
 				B1C0AD651C5DDCF800B558A0 /* Main.storyboard in Resources */,
@@ -282,9 +305,10 @@
 				B1C0AD8B1C5E087E00B558A0 /* ClientInfoVC.swift in Sources */,
 				B1C0AD8D1C5E088D00B558A0 /* AccountInfoVC.swift in Sources */,
 				B1C0AD931C5E1E0100B558A0 /* Persistence.swift in Sources */,
+				B17147801C5EFFA7001FCD47 /* ReportSelectClientVC.swift in Sources */,
 				B1C0AD7D1C5DDFB800B558A0 /* AccountsListVC.swift in Sources */,
 				B1C0AD7F1C5DE00700B558A0 /* TransactionsListVC.swift in Sources */,
-				B1C0AD871C5E084B00B558A0 /* ReportConfigurationVC.swift in Sources */,
+				B17147821C5F04E7001FCD47 /* ReportSelectDateRangeVC.swift in Sources */,
 				B1C0AD991C5EAA5400B558A0 /* TransactionType.swift in Sources */,
 				B1C0AD911C5E1C4800B558A0 /* Bank.swift in Sources */,
 				B1C0AD891C5E085C00B558A0 /* ReportResultsVC.swift in Sources */,

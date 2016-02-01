@@ -25,7 +25,6 @@ class TransactionsListVC: UITableViewController {
     // -------------------------
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        print("Transaction \(indexPath.row)")
         Bank.instance.setSelectedTransactionId(indexPath.row)
     }
     

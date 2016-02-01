@@ -12,8 +12,8 @@ class View {
     
     static var alertShownFirstTime: Bool = false
 
-    static var clientsColor =  UIColor(red: 255/255.0, green: 255/255.0, blue: 156/255.0, alpha: 1)
-    static var accountsColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 156/255.0, alpha: 1)
+    static var clientsColor =  UIColor(red: 152/255.0, green: 200/255.0, blue: 255/255.0, alpha: 1) // Soft Blue
+    static var accountsColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 156/255.0, alpha: 1) // Soft Yellow
     
     static var transactionColorSoftGreen = UIColor(red: 160/255.0, green: 255/255.0, blue: 156/255.0, alpha: 1)
     static var transactionColorSoftRed = UIColor(red: 255/255.0, green: 156/255.0, blue: 156/255.0, alpha: 1)

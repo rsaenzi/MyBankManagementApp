@@ -25,7 +25,6 @@ class AccountsListVC: UITableViewController {
     // -------------------------
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
-        print("Account \(indexPath.row)")
         Bank.instance.setSelectedAccountId(indexPath.row)
     }
     
@@ -46,7 +45,6 @@ class AccountsListVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
-        print("Icon: \(indexPath.row)")
         Bank.instance.setSelectedAccountId(indexPath.row)
         
         // Create ClientInfo screen
